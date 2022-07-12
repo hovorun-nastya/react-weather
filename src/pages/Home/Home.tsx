@@ -36,6 +36,7 @@ const nightTheme ={
 
 export const Home = (props:Props) => {
    const [isDay, setIsDay] = useState(true)
+  console.log(isDay)
 
    return (
      /* <ThemeProvider theme={isDay ? dayTheme : nightTheme}>*/
@@ -45,7 +46,7 @@ export const Home = (props:Props) => {
        <ThisDayInfo/>
       </HomeWrapper>
       <Days/>
-</div>
+  </div>
 
   );
 };
