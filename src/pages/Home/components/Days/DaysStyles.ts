@@ -1,4 +1,6 @@
 import styled from '@emotion/styled'
+
+
 export const DaysStyles = styled.div`
   display: flex;
   justify-content: space-between;
