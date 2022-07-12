@@ -5,7 +5,7 @@ import {HeaderS, Wrapper,ChangeTheme,Logo,Title} from "./Header_s";
 interface Props{
 }
 
-export const Header =(props:Props) =>{
+export const Header =(props: Props) =>{
   const options = [
     { value: 'city-1', label: 'Київ' },
     { value: 'city-2', label: 'Харків' },
