@@ -2,19 +2,9 @@ import React from "react";
 import {Card} from "./Card";
 import {Tabs} from "./Tabs";
 import {DaysStyles} from "./DaysStyles";
+import {Day} from "../../../../types/types";
 
-interface Props{
-}
-export interface Day{
-  day: string,
-  day_info: string,
-  icon_id: string,
-  temp_day: string,
-  temp_night: string,
-  info: string,
-}
-
-export const Days =(props: Props)=>{
+export const Days =()=>{
   const days: Day[] =[
     {
       day: 'Сегодня',

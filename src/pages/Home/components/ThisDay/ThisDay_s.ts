@@ -4,7 +4,7 @@ export const ThisDayHeader = styled.header`
   padding:20px;
   max-width: 400px;
   width: 100%;
-  background: #fff;
+  background: ${props => props.theme.cardsBackground};
   box-shadow: 2px 5px 25px -3px rgba(100,100,100,0.25);
   border-radius: 20px;
 `
@@ -26,7 +26,7 @@ export const ThisTemp = styled.div`
   `
 export const ThisDayName = styled.div`
   font-size: 40px;
-  color:#000;
+  color:${props => props.theme.textColor};
   `
 export const ThisTime = styled.div`
   color:#939cd0;

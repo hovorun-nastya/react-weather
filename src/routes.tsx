@@ -3,14 +3,15 @@ import { MonthStatistics } from "./pages/MonthStatistics/components/MonthStatist
 import { Home } from './pages/Home/Home';
 import {RootComponent} from "./RootComponent";
 
+
 export const routes = [
   {
     path: "/",
-    element: <RootComponent/>,
+    element: <RootComponent />,
     children: [
       {
         path: "/home",
-        element: <Home />,
+        element: <Home/>,
       },
       {
         path: "month-statics",

@@ -5,7 +5,7 @@ import styled from '@emotion/styled'
    padding:40px;
    max-width:750px;
    width:100%;
-   background:#fff;
+   background:${props => props.theme.cardsBackground};
    box-shadow: 2px 5px 25px -3px rgba(100,100,100,0.25);
    border-radius:20px;
  `
@@ -24,7 +24,7 @@ export const Indicator = styled.div`
  display: flex;
  align-items: center;
  justify-content: center;
- background-color: #fff ;
+ background-color: #FFFFFF;
  box-shadow: 2px 5px 25px -3px rgba(100,100,100,0.25);
  border-radius: 50%;
 `;
@@ -35,7 +35,8 @@ export const IndicatorName = styled.div`
 `
 export const IndicatorValue = styled.div`
  font-size:14px;
- color: #000;
+ color: ${props => props.theme.textColor};
+ 
 `
 export const CloudImg = styled.img`
  position: absolute;

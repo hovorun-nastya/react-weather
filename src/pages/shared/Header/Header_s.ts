@@ -11,9 +11,7 @@ export const Wrapper = styled.div`
  display: flex;
  align-items: center;
 `
-export const ChangeTheme = styled.div`
- margin-right: 20px;
-`
+
 export const Logo = styled.div`
  margin-right: 20px;
  svg{

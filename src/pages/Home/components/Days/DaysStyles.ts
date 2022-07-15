@@ -1,20 +1,19 @@
 import styled from '@emotion/styled'
 
-
 export const DaysStyles = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding:20px;
   width:100%;
-  background: #fff;
+  background:${props => props.theme.cardsBackground};
   box-shadow: 2px 5px 25px -3px rgba(100,100,100,0.25);
   border-radius: 0 0 20px 20px;
 `
 export const CardStyle = styled.div`
   display: flex;
   flex-direction: column;
-  background: rgba(71,147,255,0.2);
+  background: ${props => props.theme.cardBackground};
   border-radius: 10px;
   padding: 10px;
   width: 149px;
@@ -27,6 +26,7 @@ export const CardStyle = styled.div`
 export const DayStyle = styled.div`
   margin-bottom: 7px;
   font-size: 18px;
+  color: ${props => props.theme.textColor};
 `
 export const DayInfo = styled.div`
   font-size: 14px;
@@ -38,6 +38,7 @@ export const Img = styled.div`
 `
 export const DayTemp = styled.div`
   font-size: 18px;
+  color:${props => props.theme.textColor}
 `
 export const NightTemp = styled.div`
   font-size: 13px;
@@ -60,9 +61,9 @@ export const TabStyle = styled.div`
   box-shadow: 2px 5px 25px -3px rgba(180,180,100,0.25);
   border-radius:5px;
   padding: 9px 20px;
-  background-color: #fff;
+  background-color:${props => props.theme.cardsBackground} ;
   margin-right: 15px;
-  color:#000;
+  color:${props => props.theme.textColor};
   font-size: 18px;
   display: flex;
   align-items: center;
@@ -77,8 +78,8 @@ export const Cancel = styled.div`
   box-shadow: 2px 5px 25px -3px rgba(180,180,100,0.25);
   border-radius:5px;
   padding: 9px 20px;
-  background-color: #fff;
-  color:#000;
+  background-color: ${props => props.theme.cardsBackground};
+  color:${props => props.theme.textColor};
   font-size: 18px;
   display: flex;
   align-items: center;

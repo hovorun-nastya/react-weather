@@ -1,10 +1,8 @@
 import React from "react";
 import {GlobalSvgSelector} from "../../../../assets/icons/global/GlobalSvgSelector";
 import {ThisCity, ThisDayHeader, ThisDayName, ThisTemp, ThisTime, TopBlock} from "./ThisDay_s";
-interface Props{
-}
 
-export const ThisDay =(props:Props)=>{
+export const ThisDay =()=>{
   return <ThisDayHeader>
     <TopBlock>
       <div>

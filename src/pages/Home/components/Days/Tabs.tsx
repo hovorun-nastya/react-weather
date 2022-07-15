@@ -1,10 +1,7 @@
 import React from "react";
 import {TabsStyle, TabsWrapper,TabStyle,Cancel} from "./DaysStyles";
 
-interface Props{
-}
-
-export const Tabs =(props:Props)=>{
+export const Tabs =()=>{
   const tabs =[
     {
       value:'На тиждень',

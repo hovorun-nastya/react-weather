@@ -2,16 +2,9 @@ import React from 'react';
 import cloud from '../../../../assets/images/cloud.png'
 import {ThisDayItem} from "./ThisDayItem";
 import {ThisDayInfoStyle,CloudImg} from "./ThisDayInfoStyles";
+import { Item } from "../../../../types/types";
 
-interface Props{
-}
-
-export interface Item{
-  icon_id: string;
-  name: string;
-  value: string;
-}
-export const ThisDayInfo = (props:Props) =>{
+export const ThisDayInfo = () =>{
   const items = [
     {
       icon_id:'temp',

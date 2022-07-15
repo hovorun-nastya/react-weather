@@ -1,10 +1,7 @@
 import React from "react";
-import { Day } from './Days'
 import {GlobalSvgSelector} from "../../../../assets/icons/global/GlobalSvgSelector";
 import {CardStyle, DayInfo, DayStyle, Img, DayTemp, NightTemp, Info} from "./DaysStyles";
-interface Props{
-  day: Day;
-}
+import {Props} from "../../../../types/types";
 
 export const Card =({day}:Props)=>{
   return <CardStyle>
