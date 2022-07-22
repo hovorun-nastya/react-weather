@@ -4,6 +4,9 @@ import {GridColumn, GridRow} from "emotion-flex-grid";
 import { Outlet } from 'react-router-dom'
 import {ThemeProvider,Theme} from "@emotion/react";
 import {GlobalBackground} from './globalStyle'
+import {useTranslation} from "react-i18next";
+import {availableLanguages} from '../src/utils/i18n';
+import  '../src/utils/i18n';
 declare module '@emotion/react' {
   export interface Theme {
     cardsBackground: string,
@@ -30,17 +33,22 @@ export const nightTheme = {
 export const RootComponent = () => {
   const [isDay, setIsDay] = useState(true)
   console.log(isDay)
+  const [language, setLanguage] = useState("ua");
+
+
   return (
+    <React.Suspense fallback={"loading..."}>
     <ThemeProvider theme={isDay ? dayTheme : nightTheme}>
       <GlobalBackground>
     <GridRow justify ='center'>
       <GridColumn pt ='20px' width ='1200px' >
-        <Header setIsDay={setIsDay} />
+        <Header setIsDay={setIsDay} language ={language} setLanguage ={setLanguage} />
         <Outlet/>
       </GridColumn>
     </GridRow>
       </GlobalBackground>
       </ThemeProvider>
+    </React.Suspense>
   );
 };
 

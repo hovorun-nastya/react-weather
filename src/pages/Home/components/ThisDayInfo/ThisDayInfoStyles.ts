@@ -31,7 +31,7 @@ export const Indicator = styled.div`
 export const IndicatorName = styled.div`
  font-size:14px;
  color: #939cd0;
- margin-right: 20px;
+ margin-right: 10px;
 `
 export const IndicatorValue = styled.div`
  font-size:14px;

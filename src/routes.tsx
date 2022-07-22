@@ -1,7 +1,7 @@
 import  * as React from 'react';
 import { MonthStatistics } from "./pages/MonthStatistics/components/MonthStatistics";
-import { Home } from './pages/Home/Home';
 import {RootComponent} from "./RootComponent";
+import HomeContainer from "./pages/Home/HomeContainer";
 
 
 export const routes = [
@@ -11,7 +11,7 @@ export const routes = [
     children: [
       {
         path: "/home",
-        element: <Home/>,
+        element: <HomeContainer/>,
       },
       {
         path: "month-statics",
