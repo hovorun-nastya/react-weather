@@ -1,11 +1,11 @@
-import React, {Dispatch, SetStateAction, useState} from 'react';
+import React, {Suspense, useState} from 'react';
 import {Header} from "./pages/shared/Header/Header";
 import {GridColumn, GridRow} from "emotion-flex-grid";
 import { Outlet } from 'react-router-dom'
 import {ThemeProvider,Theme} from "@emotion/react";
 import {GlobalBackground} from './globalStyle'
-import {useTranslation} from "react-i18next";
-import {availableLanguages} from '../src/utils/i18n';
+
+
 import  '../src/utils/i18n';
 declare module '@emotion/react' {
   export interface Theme {
@@ -32,12 +32,11 @@ export const nightTheme = {
 
 export const RootComponent = () => {
   const [isDay, setIsDay] = useState(true)
-  console.log(isDay)
-  const [language, setLanguage] = useState("ua");
+  const [language, setLanguage] = useState('en');
 
 
   return (
-    <React.Suspense fallback={"loading..."}>
+    <Suspense fallback={"loading..."}>
     <ThemeProvider theme={isDay ? dayTheme : nightTheme}>
       <GlobalBackground>
     <GridRow justify ='center'>
@@ -48,7 +47,7 @@ export const RootComponent = () => {
     </GridRow>
       </GlobalBackground>
       </ThemeProvider>
-    </React.Suspense>
+    </Suspense>
   );
 };
 

@@ -3,6 +3,8 @@ import {Home} from "./Home";
 import {useFetchWeather} from "../../hooks/useFetchWeather";
 import {useSearchParams} from "react-router-dom";
 
+
+
 const HomeContainer = () => {
   const [searchParams] = useSearchParams()
   const {data: weather, isLoading} = useFetchWeather(searchParams.get('q') ? searchParams.get('q') : 'Kiev')

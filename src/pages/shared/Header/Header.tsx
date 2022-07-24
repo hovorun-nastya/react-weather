@@ -4,8 +4,6 @@ import {HeaderS, Wrapper, Logo, Title} from "./Header_s";
 import {Dispatch, SetStateAction} from "react";
 import {Theme, useTheme} from "@emotion/react";
 import SearchCityComponent from "./SearchCityComponent";
-import {useSearchParams} from "react-router-dom";
-import {useFetchWeather} from "../../../hooks/useFetchWeather";
 import ChangeLanguage from "../ChangeLanguage";
 
 

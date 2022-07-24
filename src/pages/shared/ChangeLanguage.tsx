@@ -7,15 +7,17 @@ type PropsType = {
 };
 const ChangeLanguage: React.FC<PropsType> = ({ language, setLanguage }) => {
   const { i18n } = useTranslation();
-  const changeLang = () => {
-    if (language === "ua") {
-      setLanguage("en");
-      i18n.changeLanguage("en");
+
+  const changeLang = async () => {
+    if (language === 'ua') {
+      setLanguage('en');
+      await i18n.changeLanguage('en');
     } else {
-      setLanguage("ua");
-      i18n.changeLanguage("ua");
+      setLanguage('ua');
+      await i18n.changeLanguage('ua');
     }
   };
+  console.log(i18n)
   return (
     <button onClick={changeLang}>
       {language}

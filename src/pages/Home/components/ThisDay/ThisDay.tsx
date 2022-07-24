@@ -1,17 +1,18 @@
 import React from "react";
+import {useTranslation} from "react-i18next";
 import {GlobalSvgSelector} from "../../../../assets/icons/global/GlobalSvgSelector";
 import {ThisCity, ThisDayHeader, ThisDayName, ThisTemp, ThisTime, TopBlock} from "./ThisDay_s";
-import {useFetchWeather} from "../../../../hooks/useFetchWeather";
 import dayjs from 'dayjs';
 
+
 export const ThisDay =({weather, city}:any)=>{
-  console.log(Math.round(weather.list[0].main.temp))
+  const { t } = useTranslation();
 
   return <ThisDayHeader>
     <TopBlock>
       <div>
       <ThisTemp>{Math.round(weather.list[0].main.temp)}</ThisTemp>
-      <ThisDayName>Today</ThisDayName>
+      <ThisDayName>{t("today")}</ThisDayName>
       </div>
       <GlobalSvgSelector id="sun"/>
     </TopBlock>
