@@ -11,7 +11,7 @@ export const Home = ({weather, city}: any) => {
         <ThisDay weather = {weather}  city = {city} />
         <ThisDayInfo weather = {weather}  city = {city} />
       </HomeWrapper>
-      <Days/>
+      <Days weather ={weather}  />
     </>
   );
 };

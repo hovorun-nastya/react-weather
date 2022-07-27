@@ -3,28 +3,30 @@ import cloud from '../../../../assets/images/cloud.png'
 import {ThisDayItem} from "./ThisDayItem";
 import {ThisDayInfoStyle, CloudImg} from "./ThisDayInfoStyles";
 import {Item} from "../../../../types/types";
+import {useTranslation} from "react-i18next";
 
 export const ThisDayInfo = ({weather, city}: any) => {
+  const {t} = useTranslation()
   const items = [
     {
       icon_id: 'temp',
-      name: 'Temperature',
-      value:Math.round(weather.list[0].main.temp)+'°C feels like ' + Math.round(weather.list[0].main.feels_like)+'°C'
+      name: t("thisDayInfo.temperature"),
+      value: Math.round(weather.list[0].main.temp) + '°C '+ t("thisDayInfo.feelsLike") + Math.round(weather.list[0].main.feels_like) + '°C'
     },
     {
       icon_id: 'pressure',
-      name: 'Pressure',
-      value: weather.list[0].main.pressure +' mm Hg'
+      name: t("thisDayInfo.pressure"),
+      value: weather.list[0].main.pressure + ' mm Hg'
     },
     {
       icon_id: 'precipitation',
-      name: 'Опади',
-      value: 'Без опадів'
+      name: t("thisDayInfo.precipitation"),
+      value: weather.list[0].pop + ' %'
     },
     {
       icon_id: 'wind',
-      name: 'Вітер',
-      value: '3 м/с - легкий вітерець'
+      name: t("thisDayInfo.wind"),
+      value: weather.list[0].wind.speed + ' ' + t("thisDayInfo.m/c")
     },
   ]
   return (

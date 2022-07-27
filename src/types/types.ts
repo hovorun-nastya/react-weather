@@ -1,11 +1,20 @@
-
+type Main ={
+  temp_max:number;
+  temp_min:number;
+}
+type Weather ={
+  description:string;
+}
 export interface Day{
+  dt: string;
+  dt_txt:any;
+  main:Main;
+  weather:Array<Weather>;
   day: string,
   day_info: string,
   icon_id: string,
-  temp_day: string,
-  temp_night: string,
   info: string,
+
 }
 export interface Props{
   day: Day;

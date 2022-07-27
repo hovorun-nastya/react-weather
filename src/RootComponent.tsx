@@ -6,7 +6,7 @@ import {ThemeProvider,Theme} from "@emotion/react";
 import {GlobalBackground} from './globalStyle'
 
 
-import  '../src/utils/i18n';
+import  './utils/i18n';
 declare module '@emotion/react' {
   export interface Theme {
     cardsBackground: string,
