@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import {ButtonLng} from "./Header/SearchCityStyle";
 
 type PropsType = {
   language: string;
@@ -18,9 +19,9 @@ const ChangeLanguage: React.FC<PropsType> = ({ language, setLanguage }) => {
     }
   };
   return (
-    <button onClick={changeLang}>
+    <ButtonLng onClick={changeLang}>
       {language}
-    </button>
+    </ButtonLng>
   );
 };
 

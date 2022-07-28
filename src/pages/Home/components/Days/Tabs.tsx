@@ -1,27 +1,14 @@
 import React from "react";
-import {TabsStyle, TabsWrapper,TabStyle,Cancel} from "./DaysStyles";
+import {TabsStyle,TabStyle} from "./DaysStyles";
+import {useTranslation} from "react-i18next";
 
 export const Tabs =()=>{
-  const tabs =[
-    {
-      value:'На тиждень',
-    },
-    {
-      value:'На 10 днів',
-    },
-    {
-      value:'На місяць',
-    },
-  ];
+const {t}=useTranslation()
   return (
   <TabsStyle>
-    <TabsWrapper>
-      {tabs.map((tab) => (
-        <TabStyle key={tab.value}>
-      {tab.value}
-    </TabStyle>))}
-  </TabsWrapper>
-    <Cancel>Відмінити</Cancel>
+        <TabStyle >
+          {t("5Day")}
+    </TabStyle>
   </TabsStyle>
   );
 };

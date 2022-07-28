@@ -1,9 +1,9 @@
-import React, {useState} from "react";
-import {GlobalSvgSelector} from "../../../../assets/icons/global/GlobalSvgSelector";
+import React from "react";
 import {CardStyle, DayInfo, DayStyle, Img, DayTemp, NightTemp, Info} from "./DaysStyles";
-import {Day, Props} from "../../../../types/types";
-import {useTranslation, withTranslation} from "react-i18next";
+import {Day} from "../../../../types/types";
+import {useTranslation} from "react-i18next";
 import dayjs from "dayjs";
+import Icons from "../../../shared/Icons/Icons";
 
 
 require('dayjs/locale/uk')
@@ -28,7 +28,7 @@ export const Card: React.FC<PropsType> = ({day}) => {
     <DayStyle>{curLang()[0].toUpperCase() + curLang().slice(1)}</DayStyle>
     <DayInfo>{day.day_info}</DayInfo>
     <Img>
-      <GlobalSvgSelector id={day.icon_id}/>
+      <Icons main ={day.weather[0].description} />
     </Img>
     <DayTemp>{day.main.temp_max > 0
       ? "+" + Math.round(day.main.temp_max)

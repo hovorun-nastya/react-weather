@@ -144,7 +144,6 @@ export const GlobalSvgSelector = ({ id }: Props) => {
         </defs>
       </svg>
     )
-
     default:
       return null;
 

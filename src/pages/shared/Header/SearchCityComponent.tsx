@@ -1,6 +1,7 @@
 import React, {useCallback, useState} from 'react';
 import {useSearchParams} from "react-router-dom";
-import {useFetchWeather} from "../../../hooks/useFetchWeather";
+import { Button, Input } from './SearchCityStyle';
+
 
 export const SearchCityComponent = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -14,19 +15,14 @@ export const SearchCityComponent = () => {
 console.log(value)
   return (
     <>
-      <input
-        value={value}
-        id="city"
-        placeholder={"Введіть місто"}
-        onChange={(e) => setValue(e.target.value)}
-        autoComplete="off"
-      />
-      <button onClick={onClick} disabled={!value}>
-        Show
-      </button>
-
-    </>
-  );
+      <Input value={value}
+             id="city"
+             placeholder={"Введіть місто"}
+             onChange={(e) => setValue(e.target.value)}
+             autoComplete="off"/>
+        <Button type="submit" onClick={onClick} disabled={!value}>Search</Button>
+      </>
+    );
 };
 
 export default SearchCityComponent;

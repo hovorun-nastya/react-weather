@@ -1,4 +1,4 @@
-import React, {useState, useTransition} from 'react';
+import React from 'react';
 import {Home} from "./Home";
 import {useFetchWeather} from "../../hooks/useFetchWeather";
 import {useSearchParams} from "react-router-dom";

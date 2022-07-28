@@ -51,7 +51,7 @@ export const Info = styled.div`
 `
 export const TabsStyle = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 7px;
 `
 export const TabsWrapper = styled.div`

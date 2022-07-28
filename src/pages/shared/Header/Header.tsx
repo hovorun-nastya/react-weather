@@ -13,8 +13,7 @@ export interface IProps {
   setLanguage: (lang: string) => void;
 }
 
-export const Header = ({setIsDay, language, setLanguage }: IProps, ) => {
-  const theme = useTheme();
+export const Header = ({setIsDay, language, setLanguage}: IProps,) => {
 
   return (
     <HeaderS>

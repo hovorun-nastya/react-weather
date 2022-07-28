@@ -23,7 +23,7 @@ export const ThisDay = ({weather, city}: any) => {
         <span> {dayjs(weather.list[0].dt_txt).format('HH:mm')}</span>
       </ThisTime>
       <ThisCity>
-        {t("thisDay.city")}<span>{city}</span>
+        {t("thisDay.city")}<span> {city}</span>
       </ThisCity>
     </div>
   </ThisDayHeader>
