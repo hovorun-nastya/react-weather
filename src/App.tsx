@@ -1,7 +1,6 @@
 import React from 'react';
-import { useRoutes } from 'react-router-dom'
-import { routes } from './routes'
-
+import {useRoutes} from 'react-router-dom'
+import {routes} from './routes'
 
 
 function App() {
@@ -9,4 +8,5 @@ function App() {
   return element
 
 }
+
 export default App;

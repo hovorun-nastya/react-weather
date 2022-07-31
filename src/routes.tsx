@@ -1,22 +1,16 @@
-import  * as React from 'react';
-import { MonthStatistics } from "./pages/MonthStatistics/components/MonthStatistics";
-import { Home } from './pages/Home/Home';
+import * as React from 'react';
 import {RootComponent} from "./RootComponent";
-
+import HomeContainer from "./pages/Home/HomeContainer";
 
 export const routes = [
   {
     path: "/",
-    element: <RootComponent />,
+    element: <RootComponent/>,
     children: [
       {
         path: "/home",
-        element: <Home/>,
-      },
-      {
-        path: "month-statics",
-        element: <MonthStatistics />
-      },
+        element: <HomeContainer/>,
+      }
     ],
   },
 ];

@@ -1,0 +1,16 @@
+{
+    "thisDay": {
+        "today": "Сьогодні",
+        "time": "Час:",
+        "city": "Місто:"
+    },
+    "thisDayInfo": {
+        "temperature": "Температура",
+        "feelsLike": "  відчуваеться як  ",
+        "pressure": "Тиск",
+        "precipitation": " Ймовірність опадів",
+        "wind": "Вітер",
+        "m/c": " м/c"
+    },
+    "5Day": "Погода на 5 днів"
+}

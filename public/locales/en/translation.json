@@ -1,0 +1,16 @@
+{
+  "thisDay": {
+    "today": "Today",
+    "time": "Time:",
+    "city": "City:"
+  },
+  "thisDayInfo": {
+    "temperature": "Temperature",
+    "feelsLike": "  feels like  ",
+    "pressure": "Pressure",
+    "precipitation": "Chance of precipitation",
+    "wind": "Wind",
+    "m/c": "m/c"
+  },
+  "5Day": "Weather for 5 days"
+}
