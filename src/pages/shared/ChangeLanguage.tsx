@@ -1,13 +1,13 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 import {ButtonLng} from "./Header/SearchCityStyle";
 
 type PropsType = {
   language: string;
   setLanguage: (lang: string) => void;
 };
-const ChangeLanguage: React.FC<PropsType> = ({ language, setLanguage }) => {
-   const { i18n } = useTranslation();
+const ChangeLanguage: React.FC<PropsType> = ({language, setLanguage}) => {
+  const {i18n} = useTranslation();
 
   const changeLang = async () => {
     if (language === 'ua') {

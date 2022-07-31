@@ -1,6 +1,6 @@
 import React, {useCallback, useState} from 'react';
 import {useSearchParams} from "react-router-dom";
-import { Button, Input } from './SearchCityStyle';
+import {Button, Input} from './SearchCityStyle';
 
 
 export const SearchCityComponent = () => {
@@ -10,9 +10,9 @@ export const SearchCityComponent = () => {
   const onClick = useCallback(() => {
     setSearchParams({q: value})
     setValue('')
-  }, [setValue, value,setSearchParams])
+  }, [setValue, value, setSearchParams])
 
-console.log(value)
+  console.log(value)
   return (
     <>
       <Input value={value}
@@ -20,9 +20,9 @@ console.log(value)
              placeholder={"Введіть місто"}
              onChange={(e) => setValue(e.target.value)}
              autoComplete="off"/>
-        <Button type="submit" onClick={onClick} disabled={!value}>Search</Button>
-      </>
-    );
+      <Button type="submit" onClick={onClick} disabled={!value}>Search</Button>
+    </>
+  );
 };
 
 export default SearchCityComponent;

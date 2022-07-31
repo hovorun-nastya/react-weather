@@ -5,7 +5,6 @@ import {DaysStyles} from "./DaysStyles";
 import {Day} from "../../../../types/types";
 
 export const Days = ({weather}: any) => {
-
   return (
     <>
       <Tabs/>
@@ -18,9 +17,7 @@ export const Days = ({weather}: any) => {
             .map((item: Day) => (
               <Card day={item}/>
             ))}
-
       </DaysStyles>
-
     </>
   );
 }

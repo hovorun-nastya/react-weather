@@ -5,13 +5,13 @@ import {ThisDayInfoStyle, CloudImg} from "./ThisDayInfoStyles";
 import {Item} from "../../../../types/types";
 import {useTranslation} from "react-i18next";
 
-export const ThisDayInfo = ({weather, city}: any) => {
+export const ThisDayInfo = ({weather}: any) => {
   const {t} = useTranslation()
   const items = [
     {
       icon_id: 'temp',
       name: t("thisDayInfo.temperature"),
-      value: Math.round(weather.list[0].main.temp) + '°C '+ t("thisDayInfo.feelsLike") + Math.round(weather.list[0].main.feels_like) + '°C'
+      value: Math.round(weather.list[0].main.temp) + '°C ' + t("thisDayInfo.feelsLike") + Math.round(weather.list[0].main.feels_like) + '°C'
     },
     {
       icon_id: 'pressure',

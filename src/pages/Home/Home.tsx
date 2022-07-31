@@ -8,10 +8,10 @@ export const Home = ({weather, city}: any) => {
   return (
     <>
       <HomeWrapper>
-        <ThisDay weather = {weather}  city = {city} />
-        <ThisDayInfo weather = {weather}  city = {city} />
+        <ThisDay weather={weather} city={city}/>
+        <ThisDayInfo weather={weather} city={city}/>
       </HomeWrapper>
-      <Days weather ={weather}  />
+      <Days weather={weather}/>
     </>
   );
 };
